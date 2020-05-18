@@ -1,0 +1,29 @@
+function setup() {
+  createCanvas(400,550);
+  img1 = loadImage('ken-kaneki.jpg');
+  img2 = loadImage('book.jpeg');
+}
+
+function draw() {
+  background(255);
+  image(img1,85,-1,0,551);//adjusts the position of image to be half off the page.
+  noStroke();
+  rect(0,0,280,220);//The white rectangle covers edges of images.
+   rect(0,0,100,550);//The white rectangle covers edges of images.
+  img1.filter(GRAY);
+  image(img2, 35,35, img2.width / 4, img2.height / 4);//this makes the image smaller and adjust the position of it.
+    tint(255, 200);//allows font/text to show up better or bee more clear.
+  //changes the images transparency.
+  
+textSize(35);
+textAlign(CENTER);
+textFont();//Adds a font so the text doesnt look boring.
+text('It Was A Pleasure',160, 270);
+text('To Burn ~ F451°',145, 320);
+
+textSize(25);
+textAlign(RIGHT);
+textFont();
+text('Tokto Ghoul: 451°',200,500);
+  text('Coming Never',160,530);
+}
