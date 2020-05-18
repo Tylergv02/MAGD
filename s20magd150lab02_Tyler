@@ -1,0 +1,92 @@
+function setup() {
+  createCanvas(400, 400);
+}
+
+function draw() {
+  background(0);
+/*
+triangle  done
+quad      done
+arc       done
+bezier    done
+shape     done
+contour   done
+
+*/  
+//--------------------------------Astronaut_Helmet---------------------------------  
+ellipseMode(CENTER);
+  noFill();
+  stroke(255);
+    bezier(160,390,10,320,180,290,0,210);
+    bezier(165,395,5,325,175,295,0,215);
+    //air hose
+  
+ellipseMode(CENTER);
+  fill(225);
+    arc(200, 365, 100, 100, 0, PI + QUARTER_PI, PIE); 
+    //light grey helmet base
+  fill(255,150,50)
+    arc(200, 365, 90, 90, PI + QUARTER_PI, TWO_PI);  
+    //blue outline
+  fill(100);
+    arc(203, 360, 85, 85, PI + QUARTER_PI, TWO_PI); 
+    //grey head window
+ 
+ellipseMode(CENTER);
+  fill(255,100,50);
+    ellipse(200,365,20,20);
+    //small centered purpleish circle
+  
+rectMode(RADIUS);
+  fill(255,150,50);
+    quad(154,365,160,360,180,375,175,380);
+    //blue rectangle 
+  
+//----------------------------ship_&_allien------------------------------  
+fill(225,0,0);
+  triangle(200,100, 150, 175, 100, 85);//top of ship
+  ellipse(340,240,90,90);//bottom of ship
+noStroke();
+fill(0);
+  ellipse(370,258,90,90);
+
+fill(200);//ship body
+  stroke(255,150,50);
+beginShape();
+  vertex(200,100)
+  vertex(350,150)
+  vertex(275,300)
+  vertex(150,175)
+  stroke(0,0,0);
+beginContour();
+  vertex(205,110)
+  vertex(330,160)
+  vertex(270,280)
+  vertex(160,175)
+endContour();  
+endShape();
+  
+fill(225,0,0);
+stroke(0);
+  fill(255,150,50);
+//beginShape();
+// Exterior part of shape, clockwise winding
+ellipse(250,185,90,90);//window border
+// Interior part of shape, counter-clockwise winding
+//beginContour();
+  fill(225,225,225);
+stroke(0, 0, 0);
+ ellipse(250,185,80,80);//window
+//endContour();
+//endShape(CLOSE);  
+ 
+fill(26,148,49);//allien
+noStroke();
+  ellipse(250,185,40,30);
+  ellipse(250,195,10,30);
+  ellipse(250,215,40,20);
+stroke(26,148,49);
+  line(250,180, 230, 160);
+  line(250,180, 270, 160);
+  
+}
