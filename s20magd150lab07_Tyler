@@ -1,0 +1,54 @@
+let bee1,bee2,bee3;
+var nums = [140,60,-35,15,50];//this is the array list for the flower function. 
+
+function setup() { 
+  createCanvas(400, 400);
+  bee1 = new Bee();
+  bee2 = new Bee();
+  bee3 = new Bee();
+} 
+
+function draw() { 
+ flower();
+  bee1.buzz();
+  bee1.display();
+  bee2.buzz();
+  bee2.display();
+  bee3.buzz();
+  bee3.display();
+}
+
+function flower(){
+  background(40);
+  fill(218,165,32);
+  for(var i=0;i<nums[0];i++){ 
+    push();
+    translate(width/2,height/2);
+    rotate(radians(i*360/nums[3]));//desides how many petals will "bee" on the flower. Sorry, puns 
+    ellipse((nums[1]+nums[0])/2,nums[2],nums[0],nums[4]);
+    pop();
+ 	}
+	fill(139,69,19);
+	ellipseMode(CENTER);
+	noStroke();
+	ellipse(width/2,height/2,180);
+}
+
+class Bee{
+  constructor(){
+    this.x = 200;
+    this.y = 200;
+  }
+  
+  buzz(){//creates the random buzzing movemney of each bee.
+    this.x = this.x + random(-10,10); 
+    this.y = this.y + random(-10,10);
+  }
+  
+  display(){//showes the bee by adding the shape color and stroke.
+    stroke(0);
+    fill(255,255,0);
+    ellipse(this.x,this.y,20,20);
+  }
+
+}
