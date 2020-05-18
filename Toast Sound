@@ -1,0 +1,42 @@
+//This creates the variables that can then be assignes a job/action.
+let sound, amplitude;
+
+function preload(){
+  //This assignes the mp3 to a variable.
+  sound = loadSound('bell.mp3');
+}
+function setup() {
+  createElement('h2','If you would like to make an anouncement please tap the glass.');
+  
+  let cnv = createCanvas(100,100);
+  cnv.mouseClicked(toggleSound);
+  amplitude = new p5.Amplitude();
+  
+}
+
+function draw() {
+  background(220);
+  text('tap the glass.', 20, 20);
+
+  let level = amplitude.getLevel();
+  let size = map(level, 0, 1, 0, 200);
+  ellipse((width/2) + size, height/2, 5, 5);
+  //below are 4 lines of code that draw the shape of a glass.
+  noStroke();
+  rect(64, (40), 15, 20);
+  ellipse(71,60,15,15);
+  rect(70, (60), 2, 20);
+  ellipse(71,80,15,5)
+ 
+}
+
+function toggleSound() {
+  //stops sound from playing if you click space when the sound is already playing.
+  if (sound.isPlaying() ){
+    sound.stop();
+    // if the sound is not actice it plays the sound.
+  } else {
+    sound.play();
+    createP("Now you can make you anouncement.")
+  }
+}
