@@ -1,0 +1,239 @@
+function setup() {
+  createCanvas(128, 128);//canvas size((x)width, (y)height)
+}
+
+function draw() {
+  background(220);//background color
+
+//building 1# "b"-----------------------------------------------------
+rectMode(RADIUS);
+  noStroke(); //strokWeight(#youWantStroke);
+    fill(255);
+    rect(12,92,9,35);//right of "b"
+
+  
+rectMode(RADIUS);
+  noStroke(); //strokWeight(#youWantStroke);
+    fill(255);
+    rect(30,123,10,9);//bottom mid of "b"
+    rect(30,88,8,9);//top mid of "b"
+    rect(47,104,8,25);//left of "b"
+  
+  rectMode(CORNER);
+  stroke(100);
+  strokeWeight(1);
+  noFill();
+    rect(5,60,5,5);//windowFrame
+    rect(13,60,5,5);//windowFrame
+    rect(13,70,5,5);//windowFrame
+    rect(5,90,5,5);//windowFrame
+    rect(13,100,5,5);//windowFrame
+    rect(5,110,5,5);//windowFrame
+  
+    rect(48,81,5,5);//windowFrame
+    rect(31,81,5,5);//windowFrame 
+    rect(40,81,5,5);//windowFrame
+    rect(23,81,5,5);//windowFrame
+    
+    rect(31,90,5,5);//windowFrame
+    rect(48,90,5,5);//windowFrame 
+    rect(48,99,5,5);//windowFrame 
+    rect(40,99,5,5);//windowFrame 
+    rect(48,109,5,5);//windowFrame 
+    
+rectMode(CORNER);
+  strokeWeight(1);
+  fill(100);
+    rect(5,70,5,5);//windowFrame fill
+    rect(5,80,5,5);//windowFrame fill
+    rect(13,80,5,5);//windowFrame fill
+    rect(13,90,5,5);//windowFrame fill
+    rect(5,100,5,5);//windowFrame fill
+    rect(13,110,5,5);//windowFrame fill
+  
+    rect(5,118,5,8);//door Frame
+    rect(13,118,5,8);//door Frame
+  
+    rect(23,90,5,5);//windowFrame
+    rect(40,90,5,5);//windowFrame
+    rect(40,109,5,5);//windowFrame
+  
+  stroke(60);
+    line(22,118,42,118);//filler design
+    line(26,121,46,121);//filler design
+    line(30,124,50,124);//filler design
+    
+
+  
+  
+//Building 2# "U"-----------------------------------------------------
+rectMode(RADIUS);
+  noStroke(); //strokWeight(#youWantStroke);
+    fill(255); 
+    rect(68,104,9,25);//left side of U
+    rect(77,120,9,9);//center side of U
+    rect(93,104,9,25);//right side of U
+
+  
+rectMode(CORNER);
+  stroke(100);
+  strokeWeight(1);
+  fill(100);
+    rect(86,82,5,5);//windowFrame fill
+    rect(94,82,5,5);//windowFrame fill
+    rect(86,91,5,5);//windowFrame fill
+    rect(86,100,5,5);//windowFrame fill
+    rect(86,109,5,5);//windowFrame fill
+    rect(69,100,5,5);//windowFrame fill
+    rect(69,91,5,5);//windowFrame fill
+  
+    rect(76,118,4,8);//door Frame fill
+    rect(81,118,4,8);//door Frame fill
+  
+rectMode(CORNER);
+  stroke(100);
+  strokeWeight(1);
+  noFill(); 
+    rect(94,109,5,5);//windowFrame 
+    rect(94,100,5,5);//windowFrame 
+    rect(94,91,5,5);//windowFrame 
+    rect(61,100,5,5);//windowFrame
+    rect(69,109,5,5);//windowFrame
+    rect(69,82,5,5);//windowFrame 
+    rect(61,82,5,5);//windowFrame 
+    rect(61,91,5,5);//windowFrame 
+    rect(61,100,5,5);//windowFrame
+    rect(69,109,5,5);//windowFrame
+    rect(61,109,5,5);//windowFrame
+  
+  stroke(60);
+    line(60,120,68,120);//filler design
+    line(64,123,72,123);//filler design
+  
+    line(87,120,96,120);//filler design
+    line(91,123,99,123);//filler design
+  
+//Building 2# "I" -----------------------------------------------------
+rectMode(RADIUS);
+  noStroke(); //strokWeight(#youWantStroke);
+  fill(255); 
+    rect(115,104,9,25);//body of I
+
+ellipseMode(RADIUS);
+  fill(100);
+  stroke(0);
+  strokeWeight(1);
+  ellipse(115,60,10,10);// top of I
+   
+ellipseMode(CORNER);
+  noFill();
+  stroke(0);
+  strokeWeight(1);
+    ellipse(113,47,3,3);//chain
+    ellipse(113,43,3,3);//chain
+    ellipse(113,39,3,3);//chain
+    ellipse(113,35,3,3);//chain
+  
+  stroke(60);
+    line(113,35,150,55);//crane
+    line(113,35,150,60);//crane
+  strokeCap(ROUND);
+  stroke(0)
+    line(113,35,190,50);//crane
+    line(113,35,200,65);//crane
+  
+  rectMode(CORNER);
+  stroke(100);
+  strokeWeight(1);
+  noFill(); 
+    rect(117,91,5,5);//windowFrame
+    rect(117,100,5,5);//windowFrame
+    rect(109,109,5,5);//windowFrame
+    
+    
+rectMode(CORNER);
+  strokeWeight(1);
+  fill(100);
+    rect(109,82,5,5);//windowFrame fill
+    rect(117,82,5,5);//windowFrame fill
+    rect(109,91,5,5);//windowFrame fill
+    rect(109,100,5,5);//windowFrame fill
+    rect(117,109,5,5);//windowFrame fill
+  
+    rect(117,118,5,8);//door Frame
+    rect(109,118,5,8);//door Frame
+    
+//night ski --------------------------------------------------------------
+ellipseMode(CORNER);
+  noFill();
+  stroke(0);
+  strokeWeight(1);
+  ellipse(35,10,30,30);//moon
+  
+  //Stars (points)  
+  point(8, 10);
+  point(35, 10);
+  point(86, 10);
+  point(97, 10);
+  
+  point(19, 15);
+  point(9, 15);
+  point(99, 15);
+  point(73, 15);
+  point(112, 15);
+  
+  point(30, 20);
+  point(80, 20);
+  point(30, 20);
+  point(70, 20);
+  point(100, 20);
+  
+  point(23, 25);
+  point(6, 25);
+  point(16, 25);
+  point(86, 25);
+  point(102, 25);
+    
+  point(25,30);
+  point(10, 30);
+  point(82, 30);
+  point(92, 30);
+  point(112, 30);
+  
+  point(23, 35);
+  point(6, 35);
+  point(16, 35);
+  point(86, 35);
+  point(68, 35);
+  
+  point(10, 40);
+  point(20, 40);
+  point(30, 40);
+  point(40, 40);
+  point(100, 40);
+  point(60, 40);
+  point(70, 40);
+  point(80, 40);
+  
+  point(15, 45);
+  point(23, 45);
+  point(37, 45);
+  point(46, 45);
+  point(52, 45);
+  point(64, 45);
+  point(75, 45);
+  point(82, 45);
+  point(95, 45);
+  point(102, 45);
+  
+  point(12, 50);
+  point(27, 50);
+  point(33, 50);
+  point(48, 50);
+  point(56, 50);
+  point(62, 50);
+  point(71, 50);
+  point(88, 50);
+  point(97, 50);
+  point(108, 50);
+}
